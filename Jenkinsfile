@@ -4,13 +4,14 @@ pipeline{
     agent any
     
     stages{
-        stage("Code Clone"){
-            steps{
-               script{
-                   git URL: "https://github.com/iemafzalhassan/two-tier-flask-app.git", branch: "master"
-               }
+        stage("Code Clone") {
+            steps {
+                script {
+                    git branch: "master", url: "https://github.com/iemafzalhassan/two-tier-flask-app.git"
+                }
             }
         }
+
         stage("Trivy File System Scan"){
             steps{
                 script{
