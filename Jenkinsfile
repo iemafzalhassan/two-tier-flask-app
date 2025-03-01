@@ -1,4 +1,4 @@
-@Library("Shared") _
+// @Library("Shared") _
 pipeline{
     
     agent { label "dev"};
@@ -7,7 +7,7 @@ pipeline{
         stage("Code Clone"){
             steps{
                script{
-                   clone("https://github.com/LondheShubham153/two-tier-flask-app.git", "master")
+                   clone("https://github.com/iemafzalhassan/two-tier-flask-app.git", "master")
                }
             }
         }
